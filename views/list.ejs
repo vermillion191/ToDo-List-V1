@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <title>ToDo List</title>
+</head>
+
+<body>
+
+  <div class="box" id="heading">
+    <h1><%= listTitle %></h1>
+  </div>
+
+  <div class="box">
+    <% for(let i = 0; i < newItemsList.length; i++){ %>
+      <div class="item">
+        <input type="checkbox">
+        <p><%= newItemsList[i] %></p>
+      </div>
+    <% } %>
+
+    <form class="item" action="/" method="post">
+      <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+      <button type="submit" name="list" value=<%= listTitle %>>+</button>
+    </form>
+
+  </div>
+
+</body>
+<footer>
+  <p>This website is made my Vermillion</p>
+</footer>
+</html>
